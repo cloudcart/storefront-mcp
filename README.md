@@ -38,11 +38,13 @@ Things that pass validation and still go wrong:
   shown the amount as the store writes money
 - a paged product list or search **without its facets** (`filters`,
   `productFilters`) or **without `totalCount`** — the API already computed them
+- a `metafield` asked for **without its `namespace`** — the store has no
+  app-reserved namespace, so a key alone finds nothing
 
 It also answers names borrowed from other storefront APIs — `productByHandle`,
 `checkoutCreate`, `cartDeliveryAddressesAdd`, `cartGiftCardCodesUpdate`,
-`customerAccessTokenCreate`, `metaobjects`, `Product.metafields` — each coming
-back with the CloudCart equivalent and the reason it differs. Most of the
+`customerAccessTokenCreate` — each coming back with the CloudCart equivalent and
+the reason it differs. Most of the
 vocabulary is deliberately familiar; these are the places it is not.
 
 ## Install

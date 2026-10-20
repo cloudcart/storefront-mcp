@@ -70,10 +70,6 @@ const UNKNOWN_OPERATIONS: Record<string, string> = {
   productVariants: "variants are a field on a product: `product(handle:) { variants { … } }`.",
   collectionByHandle: "use `collection(handle:)`.",
   productByHandle: "use `product(handle:)`.",
-  // Until the metafields and metaobjects of the platform are deployed to sf: then
-  // the schema has them, and these two entries go.
-  metaobject: "there are no metaobjects. Category property values are on `product.properties`.",
-  metaobjects: "there are no metaobjects. Category property values are on `product.properties`.",
 };
 
 /**
@@ -83,7 +79,6 @@ const UNKNOWN_FIELDS: Record<string, string> = {
   "Cart.checkoutChargeAmount": "use `cost { totalAmount }`",
   "CartLine.attributes":
     "use `options`: the customizations chosen for the line. `product.customizations` says what a product accepts",
-  "Product.metafields": "use `properties` for category property values; the `productMetafield` filter finds products by them",
   "Customer.lastIncompleteCheckout": "there is no such link; keep the cart id in your own client",
   "Order.fulfillments": "use `fulfillment`",
   "SearchResultItemConnection.filters": "a search's facets are `productFilters`",
@@ -159,6 +154,18 @@ function runtimeHints(query: string): string[] {
   if (/\bpaymentMethods\b/.test(query) && !/selectedDeliveryOption|deliveryAddress/.test(query)) {
     hints.push(
       "`paymentMethods` is empty until a shippable cart has a delivery service chosen: the courier decides part of what is allowed. Read it after selecting delivery, and again if delivery changes.",
+    );
+  }
+
+  // A metafield is found by its namespace and key: the store has no
+  // app-reserved namespace to fall back on, so a key alone finds nothing.
+  const metafieldCalls = [...query.matchAll(/\bmetafield\(([^)]*)\)/g)].map((match) => match[1]);
+  const identifiers = [...query.matchAll(/\bmetafields\(identifiers:\s*\[([^\]]*)\]/g)].flatMap((match) =>
+    [...match[1].matchAll(/\{([^{}]*)\}/g)].map((object) => object[1]),
+  );
+  if ([...metafieldCalls, ...identifiers].some((args) => /\bkey:/.test(args) && !/\bnamespace:/.test(args))) {
+    hints.push(
+      "A metafield asked for by `key` without `namespace` always answers `null`: the store has no app-reserved namespace. Pass the definition's `namespace` too.",
     );
   }
 

@@ -15,9 +15,9 @@ export const STOREFRONT_GUIDE = `
 # CloudCart Storefront API
 
 \`POST /api/sf\` — one GraphQL endpoint for the whole storefront: catalog,
-collections, search, content, cart, checkout, customer accounts, orders and
-returns. One schema serves every client: Nitrogen storefronts, the mobile app
-and others.
+collections, search, content, metafields and metaobjects, cart, checkout,
+customer accounts, orders and returns. One schema serves every client: Nitrogen
+storefronts, the mobile app and others.
 
 ## On a Nitrogen storefront
 
@@ -303,6 +303,64 @@ sign-up forms.
 
 \`storeLocations\` lists the merchant's physical shops, for a store locator and
 for collect-from-shop.
+
+---
+
+# Metafields and metaobjects
+
+The merchant's own fields and content types. Only definitions whose storefront
+access is \`PUBLIC_READ\` are returned; anything else answers \`null\` or an
+empty list, never an error.
+
+\`Product\`, \`Collection\` and \`Customer\` have \`metafield(namespace, key)\` and
+\`metafields(identifiers: [{namespace, key}])\`. **Always pass \`namespace\`**: the
+store has no app-reserved namespace, so a \`metafield(key:)\` without one finds
+nothing. \`metafields\` answers one entry per identifier, in their order, \`null\`
+where there is no value — read it by position. A smart collection has no
+metafields.
+
+\`value\` is always a string, whatever the \`type\` (\`boolean\`,
+\`number_integer\`, \`single_line_text_field\`, \`list.product_reference\`, …); a
+\`list.*\` type is a JSON array in that string, and \`list\` says which. A
+reference type gives the record: \`reference\` for one,
+\`references(first:)\` for a list, each a \`MetafieldReference\` — \`Product\`,
+\`ProductVariant\`, \`Collection\`, \`Page\`, \`Metaobject\`, \`MediaImage\`,
+\`Video\` or \`GenericFile\` — read with inline fragments. A record the storefront
+does not show is \`null\` in \`reference\` and left out of \`references\`.
+
+\`\`\`graphql
+query ProductSpecs($handle: String!) {
+  product(handle: $handle) {
+    metafields(identifiers: [
+      {namespace: "custom", key: "material"}
+      {namespace: "custom", key: "care_guide"}
+    ]) {
+      key
+      type
+      value
+      reference { ... on MediaImage { image { url altText } } }
+    }
+  }
+}
+\`\`\`
+
+A metaobject is an entry of a content type: \`metaobject(handle: {type, handle})\`
+or \`metaobject(id:)\` for one, \`metaobjects(type:, first:)\` for a type's
+entries (an unknown or hidden type gives an empty list). Read its values with
+\`field(key:)\` or \`fields\`, which has only the fields that have a value; a
+\`MetaobjectField\` has the same \`value\`, \`reference\` and \`references\` as a
+metafield. \`metaobjects\` sorts by \`sortKey\` (\`id\` or \`updated_at\`) with
+\`reverse\`, and filters with \`query\` on the type's filterable fields:
+\`fields.color:blue\`, \`fields.year:>=2020\`, \`-fields.tags:"sale"\`. A term it
+cannot filter by is ignored, not refused.
+
+A customer's own metafields come only to that customer, through
+\`customer(customerAccessToken:)\`, and only for definitions the merchant opened
+to customer accounts.
+
+These fields count toward the query's complexity: \`metafields\` one object per
+identifier, \`metaobjects\` and \`references\` per item of their page. Ask for
+small pages; a document over 1 000 is refused.
 
 ---
 
