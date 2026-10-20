@@ -1,0 +1,42 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Verify the server starts with its three tools
+        run: |
+          echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | timeout 5 node dist/index.js 2>/dev/null | python3 -c "
+          import sys, json
+          names = sorted(t['name'] for t in json.load(sys.stdin)['result']['tools'])
+          assert names == ['introspect_graphql_schema', 'learn_cloudcart_storefront', 'validate_graphql_codeblocks'], names
+          print('✓ tools:', ', '.join(names))
+          "
+
+      - name: The release tag is the package's version
+        run: |
+          test "${GITHUB_REF_NAME#v}" = "$(node -p "require('./package.json').version")"
+
+      - name: Publish to npm
+        run: npm publish --access public

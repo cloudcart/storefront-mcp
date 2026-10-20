@@ -1,0 +1,66 @@
+name: CloudCart Storefront MCP
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm audit --omit=dev
+
+      - name: Verify the server starts with its three tools
+        run: |
+          echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | timeout 5 node dist/index.js 2>/dev/null | python3 -c "
+          import sys, json
+          names = sorted(t['name'] for t in json.load(sys.stdin)['result']['tools'])
+          assert names == ['introspect_graphql_schema', 'learn_cloudcart_storefront', 'validate_graphql_codeblocks'], names
+          print('✓ tools:', ', '.join(names))
+          "
+
+      - name: Verify the guide
+        run: |
+          echo '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"learn_cloudcart_storefront","arguments":{}}}' | timeout 5 node dist/index.js 2>/dev/null | python3 -c "
+          import sys, json
+          text = json.load(sys.stdin)['result']['content'][0]['text']
+          assert 'CONVERSATION ID' in text, 'no conversation id'
+          assert '@inContext(buyer:' in text and 'checkoutUrl' in text, 'the Nitrogen part is missing'
+          assert 'Authorization: Bearer' not in text, 'the guide tells to send the buyer in Authorization'
+          print('✓ guide')
+          "
+
+      - name: Verify schema lookup
+        run: |
+          echo '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"introspect_graphql_schema","arguments":{"query":"Cart","conversationId":"ci"}}}' | timeout 5 node dist/index.js 2>/dev/null | python3 -c "
+          import sys, json
+          text = json.load(sys.stdin)['result']['content'][0]['text']
+          assert '## Types' in text and 'checkoutUrl' in text, 'Cart not found'
+          print('✓ schema lookup')
+          "
+
+      - name: Verify validation
+        run: |
+          echo '{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"validate_graphql_codeblocks","arguments":{"codeblocks":[{"content":"query { product(handle: \"x\") { id title } }"},{"content":"query { productByHandle(handle: \"x\") { id } }"}],"conversationId":"ci"}}}' | timeout 5 node dist/index.js 2>/dev/null | python3 -c "
+          import sys, json
+          text = json.load(sys.stdin)['result']['content'][0]['text']
+          assert 'SUCCESS' in text, 'a valid query was refused'
+          assert 'FAILED' in text and 'product(handle:)' in text, 'a borrowed name got no hint'
+          print('✓ validation')
+          "
