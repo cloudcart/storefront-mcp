@@ -105,7 +105,7 @@ changes `sf/schema`.
 
 1. Regenerate the schema from the deployed commit (above), `npm run build`, and check the three tools.
 2. Bump `version` in `package.json` (the server reads it from there), commit, push `main`; CI builds and checks the tools on Node 20, 22 and 24.
-3. `gh release create vX.Y.Z` — the `Publish to npm` workflow checks the tag equals the version and publishes. It needs the repository secret `NPM_TOKEN`.
+3. Publish by hand, from a clean clone of that commit: `npm ci`, `npm run build`, `npm publish --access public` with an npm login that may write `@cloudcart/storefront-mcp` (the account confirms with its security key). Then `gh release create vX.Y.Z` for the notes; it publishes nothing.
 
 ## Layout
 
@@ -115,5 +115,5 @@ src/prompts/storefront.ts    what an assistant must know before writing anything
 src/app-resources.ts         which fields depend on a merchant's installed apps
 src/tools/                   the three tools
 src/schema/loader.ts         reads and caches the introspection JSON
-.github/workflows/           CI on every push; the npm release on a GitHub release
+.github/workflows/           CI on every push
 ```
