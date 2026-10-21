@@ -1,0 +1,1820 @@
+{
+ "wikiCommit": "ce6941bb7cfb8a408e041261130854882dc04315",
+ "note": "Curated by hand: each link was proposed after reading its page and kept after a second, independent reading of the whole page. Checked by scripts/check-wiki-links.ts.",
+ "links": {
+  "AnalyticsConsentGroup": [
+   {
+    "title": "GDPR — Cookies: groups",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-groups.md",
+    "evidence": "the categories the visitor accepts or rejects as a unit"
+   }
+  ],
+  "Article": [
+   {
+    "title": "Blog Article",
+    "path": "wiki/entities/blog-article.md",
+    "evidence": "chronological piece of content"
+   },
+   {
+    "title": "Blog Articles",
+    "path": "wiki/features/marketing-blog-articles.md",
+    "evidence": "where the merchant writes and publishes the long-form content that lives at /blog/"
+   },
+   {
+    "title": "Blog Articles — storefront visibility & publishing",
+    "path": "wiki/features/marketing-blog-articles/blog-articles-storefront-visibility.md",
+    "evidence": "whether it appears on the storefront, on which URLs, with which comment behaviour"
+   }
+  ],
+  "ArticleCommentCreateInput": [
+   {
+    "title": "Blog Comments — Storefront submission",
+    "path": "wiki/features/marketing-blog-comment/marketing-blog-comment-submission.md",
+    "evidence": "what happens when a visitor submits the comment form on an article page"
+   },
+   {
+    "title": "Blog Comment",
+    "path": "wiki/entities/blog-comment.md",
+    "evidence": "piece of visitor-submitted feedback attached to a single Blog Article"
+   },
+   {
+    "title": "Blog Comment — Moderation policy",
+    "path": "wiki/entities/blog-comment/blog-comment-moderation-policy.md",
+    "evidence": "The moderation policy for Blog Comments is per-Blog Category, not per-article and not per-comment"
+   }
+  ],
+  "ArticleCommentCreatePayload": [
+   {
+    "title": "Blog Comments — Storefront submission",
+    "path": "wiki/features/marketing-blog-comment/marketing-blog-comment-submission.md",
+    "evidence": "what happens when a visitor submits the comment form on an article page"
+   },
+   {
+    "title": "Blog Comment",
+    "path": "wiki/entities/blog-comment.md",
+    "evidence": "piece of visitor-submitted feedback attached to a single Blog Article"
+   },
+   {
+    "title": "Blog Comment — Moderation policy",
+    "path": "wiki/entities/blog-comment/blog-comment-moderation-policy.md",
+    "evidence": "The moderation policy for Blog Comments is per-Blog Category, not per-article and not per-comment"
+   }
+  ],
+  "ArticleConnection": [
+   {
+    "title": "Blog Articles",
+    "path": "wiki/features/marketing-blog-articles.md",
+    "evidence": "where the merchant writes and publishes the long-form content that lives at /blog/"
+   }
+  ],
+  "ArticleTag": [
+   {
+    "title": "Blog Tags — Storefront & SEO",
+    "path": "wiki/features/marketing-blog-tags/blog-tags-storefront-seo.md",
+    "evidence": "Every tag becomes its own indexable page at /blog/tag/<slug>"
+   },
+   {
+    "title": "Blog Tag",
+    "path": "wiki/entities/blog-tag.md",
+    "evidence": "free-form, flat label that the merchant attaches to a Blog Article"
+   }
+  ],
+  "Blog": [
+   {
+    "title": "Blog Categories",
+    "path": "wiki/features/marketing-blog-category.md",
+    "evidence": "top-level container for blog articles"
+   },
+   {
+    "title": "Blog Category",
+    "path": "wiki/entities/blog-category.md",
+    "evidence": "top-level container for Blog Articles"
+   }
+  ],
+  "Brand": [
+   {
+    "title": "Brand settings",
+    "path": "wiki/features/settings-brand.md",
+    "evidence": "seven brand assets"
+   }
+  ],
+  "BrandModelFilter": [
+   {
+    "title": "Brand-Model (device compatibility catalog)",
+    "path": "wiki/features/brand-model.md",
+    "evidence": "the storefront then exposes a brand-then-model filter on category pages"
+   }
+  ],
+  "BundlePriceType": [
+   {
+    "title": "Bundles — pricing modes",
+    "path": "wiki/features/bundles-list/bundles-list-pricing.md",
+    "evidence": "the two mutually-exclusive pricing modes (fixed price vs percentage discount)"
+   }
+  ],
+  "Cart": [
+   {
+    "title": "Cart",
+    "path": "wiki/entities/cart.md",
+    "evidence": "pre-purchase, in-progress record of what a customer is preparing to buy"
+   },
+   {
+    "title": "Cart vs order lifecycle",
+    "path": "wiki/concepts/cart-vs-order-lifecycle.md",
+    "evidence": "Cart is the pre-purchase, in-progress record"
+   }
+  ],
+  "CartDelivery": [
+   {
+    "title": "Shipping calculation",
+    "path": "wiki/concepts/shipping-calculation.md",
+    "evidence": "which shipping methods are *available*, what each one *costs*"
+   }
+  ],
+  "CartDeliveryCarrier": [
+   {
+    "title": "Checkout — Shipping method step (provider × service)",
+    "path": "wiki/storefront/checkout/checkout-step-shipping-method.md",
+    "evidence": "they pick the actual shipping method"
+   },
+   {
+    "title": "Shipping calculation",
+    "path": "wiki/concepts/shipping-calculation.md",
+    "evidence": "which shipping methods are *available*, what each one *costs*"
+   }
+  ],
+  "CartDeliveryOption": [
+   {
+    "title": "Checkout — Shipping method step (provider × service)",
+    "path": "wiki/storefront/checkout/checkout-step-shipping-method.md",
+    "evidence": "they pick the actual shipping method"
+   },
+   {
+    "title": "Shipping calculation",
+    "path": "wiki/concepts/shipping-calculation.md",
+    "evidence": "which shipping methods are *available*, what each one *costs*"
+   }
+  ],
+  "CartDeliverySlot": [
+   {
+    "title": "Checkout — Time slots / delivery date picker",
+    "path": "wiki/storefront/checkout/checkout-step-time-slots.md",
+    "evidence": "book your delivery"
+   }
+  ],
+  "CartDiscountCode": [
+   {
+    "title": "Discount Code",
+    "path": "wiki/entities/discount-code.md",
+    "evidence": "redeemable string the customer enters at checkout"
+   }
+  ],
+  "CartMessage": [
+   {
+    "title": "Cart Rules",
+    "path": "wiki/features/apps-cart-rules.md",
+    "evidence": "trigger-and-action rules engine"
+   }
+  ],
+  "CartOffer": [
+   {
+    "title": "Cross-Sell & UpSell",
+    "path": "wiki/features/marketing-cross-sell.md",
+    "evidence": "conditional product recommendations"
+   }
+  ],
+  "CartPaymentMethod": [
+   {
+    "title": "Checkout — Payment step",
+    "path": "wiki/storefront/checkout/checkout-step-payment.md",
+    "evidence": "The customer picks the payment provider for the order"
+   }
+  ],
+  "CartPickupPoint": [
+   {
+    "title": "Checkout — Shipping to office / locker (with + without Google Maps)",
+    "path": "wiki/storefront/checkout/checkout-step-shipping-pickup.md",
+    "evidence": "carrier-owned pickup point"
+   }
+  ],
+  "CheckoutCustomField": [
+   {
+    "title": "Custom fields — storefront behaviour",
+    "path": "wiki/features/customers-custom-fields/customers-custom-fields-storefront-behaviour.md",
+    "evidence": "when the customer sees the field at checkout"
+   },
+   {
+    "title": "Customer custom fields",
+    "path": "wiki/features/customers-custom-fields.md",
+    "evidence": "additional fields that appear on the storefront checkout"
+   }
+  ],
+  "CheckoutCustomerAccess": [
+   {
+    "title": "Cart and checkout — Accounts and registration",
+    "path": "wiki/features/settings-cart/settings-cart-accounts-registration.md",
+    "evidence": "whether the storefront accepts guests, registered customers, or both"
+   }
+  ],
+  "CheckoutFieldSettings": [
+   {
+    "title": "Cart and checkout — Checkout fields",
+    "path": "wiki/features/settings-cart/settings-cart-checkout-fields.md",
+    "evidence": "which checkout fields are required, optional, or hidden"
+   }
+  ],
+  "CheckoutGdprPolicy": [
+   {
+    "title": "GDPR — Policy: form mapping",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-forms.md",
+    "evidence": "many-to-many mapping between policies and the 5 GDPR form types"
+   }
+  ],
+  "CheckoutLegalSettings": [
+   {
+    "title": "Cart and checkout — Marketing and consent",
+    "path": "wiki/features/settings-cart/settings-cart-marketing-consent.md",
+    "evidence": "storefront consent UI at checkout"
+   }
+  ],
+  "CheckoutLimitSettings": [
+   {
+    "title": "Cart and checkout — Order limits and stock decrement",
+    "path": "wiki/features/settings-cart/settings-cart-limits-and-decrement.md",
+    "evidence": "hard caps on cart contents"
+   }
+  ],
+  "CheckoutRegistrationSettings": [
+   {
+    "title": "Cart and checkout — Accounts and registration",
+    "path": "wiki/features/settings-cart/settings-cart-accounts-registration.md",
+    "evidence": "decide who can place an order"
+   }
+  ],
+  "CheckoutSettings": [
+   {
+    "title": "Cart and checkout",
+    "path": "wiki/features/settings-cart.md",
+    "evidence": "everything that happens between"
+   }
+  ],
+  "Collection.metafield": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "Collection.metafields": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "Comment": [
+   {
+    "title": "Blog Comments — Storefront submission",
+    "path": "wiki/features/marketing-blog-comment/marketing-blog-comment-submission.md",
+    "evidence": "what happens when a visitor submits the comment form on an article page"
+   },
+   {
+    "title": "Blog Comment",
+    "path": "wiki/entities/blog-comment.md",
+    "evidence": "piece of visitor-submitted feedback attached to a single Blog Article"
+   },
+   {
+    "title": "Blog Comment — Moderation policy",
+    "path": "wiki/entities/blog-comment/blog-comment-moderation-policy.md",
+    "evidence": "The moderation policy for Blog Comments is per-Blog Category, not per-article and not per-comment"
+   }
+  ],
+  "CommentConnection": [
+   {
+    "title": "Blog Comments — Storefront submission",
+    "path": "wiki/features/marketing-blog-comment/marketing-blog-comment-submission.md",
+    "evidence": "what happens when a visitor submits the comment form on an article page"
+   },
+   {
+    "title": "Blog Comment",
+    "path": "wiki/entities/blog-comment.md",
+    "evidence": "piece of visitor-submitted feedback attached to a single Blog Article"
+   }
+  ],
+  "CommentPolicy": [
+   {
+    "title": "Blog Categories — Comment policy",
+    "path": "wiki/features/marketing-blog-category/blog-category-comment-policy.md",
+    "evidence": "Each blog category carries its own comment policy"
+   },
+   {
+    "title": "Blog Comment — Moderation policy",
+    "path": "wiki/entities/blog-comment/blog-comment-moderation-policy.md",
+    "evidence": "The moderation policy for Blog Comments is per-Blog Category, not per-article and not per-comment"
+   }
+  ],
+  "ContactFormInput": [
+   {
+    "title": "Contacts page (storefront)",
+    "path": "wiki/storefront/contacts.md",
+    "evidence": "contact form whose submissions are e-mailed to the merchant's `site_email`"
+   }
+  ],
+  "ContactFormSubmitPayload": [
+   {
+    "title": "Contacts page (storefront)",
+    "path": "wiki/storefront/contacts.md",
+    "evidence": "contact form whose submissions are e-mailed to the merchant's `site_email`"
+   }
+  ],
+  "CookieConsent": [
+   {
+    "title": "GDPR → Cookies",
+    "path": "wiki/features/apps-gdpr-cookies.md",
+    "evidence": "cookie-consent experience"
+   },
+   {
+    "title": "GDPR — Cookies: bar & wall presentation",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-bar-wall.md",
+    "evidence": "a dismissible bar at page-bottom vs a blocking wall modal"
+   }
+  ],
+  "CookieConsentGroup": [
+   {
+    "title": "GDPR — Cookies: groups",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-groups.md",
+    "evidence": "categories the visitor accepts or rejects as a unit"
+   }
+  ],
+  "CookieConsentMode": [
+   {
+    "title": "GDPR — Cookies: bar & wall presentation",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-bar-wall.md",
+    "evidence": "a dismissible bar at page-bottom vs a blocking wall modal"
+   }
+  ],
+  "CookieConsentProvider": [
+   {
+    "title": "GDPR — Cookies: cookie definitions",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-definitions.md",
+    "evidence": "individual cookie definitions"
+   }
+  ],
+  "CreditPlan": [
+   {
+    "title": "Checkout — Payment step",
+    "path": "wiki/storefront/checkout/checkout-step-payment.md",
+    "evidence": "The customer picks the payment provider for the order"
+   }
+  ],
+  "CrossSellOffer": [
+   {
+    "title": "Cross-Sell & UpSell",
+    "path": "wiki/features/marketing-cross-sell.md",
+    "evidence": "conditional product recommendations"
+   },
+   {
+    "title": "Cross-Sell — display modes & discounts",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-display-discounts.md",
+    "evidence": "how the offered products are surfaced"
+   }
+  ],
+  "CurrencyCode": [
+   {
+    "title": "Multi-currency pricing",
+    "path": "wiki/concepts/multi-currency.md",
+    "evidence": "single-currency by design"
+   }
+  ],
+  "Customer": [
+   {
+    "title": "Customer",
+    "path": "wiki/entities/customer.md",
+    "evidence": "buyer of the merchant's store"
+   }
+  ],
+  "Customer.metafield": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "Customer.metafields": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "CustomerPolicyConsentRequest": [
+   {
+    "title": "GDPR — Consent capture & acceptance logging",
+    "path": "wiki/features/apps-gdpr-overview/apps-gdpr-overview-consent-logging.md",
+    "evidence": "where and how policy consent is captured into the acceptance log"
+   }
+  ],
+  "CustomerSubscription": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   },
+   {
+    "title": "Subscriptions (recurring orders)",
+    "path": "wiki/features/apps-subscriptions.md",
+    "evidence": "repeating schedule"
+   }
+  ],
+  "CustomerSubscriptionAction": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   }
+  ],
+  "CustomerSubscriptionConnection": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   },
+   {
+    "title": "Subscriptions (recurring orders)",
+    "path": "wiki/features/apps-subscriptions.md",
+    "evidence": "repeating schedule"
+   }
+  ],
+  "CustomerSubscriptionCycle": [
+   {
+    "title": "Subscriptions (recurring orders)",
+    "path": "wiki/features/apps-subscriptions.md",
+    "evidence": "repeating schedule"
+   }
+  ],
+  "CustomerSubscriptionEdge": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   },
+   {
+    "title": "Subscriptions (recurring orders)",
+    "path": "wiki/features/apps-subscriptions.md",
+    "evidence": "repeating schedule"
+   }
+  ],
+  "CustomerSubscriptionPayload": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   }
+  ],
+  "Domain": [
+   {
+    "title": "Domain",
+    "path": "wiki/entities/domain.md",
+    "evidence": "A Domain is a hostname attached to the merchant's Site"
+   }
+  ],
+  "FastOrderSettings": [
+   {
+    "title": "Fast Order (one-click order button)",
+    "path": "wiki/features/apps-fast-order.md",
+    "evidence": "single-form, single-click order"
+   },
+   {
+    "title": "Fast Order → Settings",
+    "path": "wiki/features/apps-fast-order-settings.md",
+    "evidence": "configures the button title + display behaviour"
+   }
+  ],
+  "FastOrderTrackingEvents": [
+   {
+    "title": "Fast Order — tracking, meta flag & countdown",
+    "path": "wiki/features/apps-fast-order/apps-fast-order-tracking.md",
+    "evidence": "which Facebook Pixel events fire"
+   }
+  ],
+  "GdprRequest": [
+   {
+    "title": "GDPR → Requests: data model",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-data-model.md",
+    "evidence": "what a request actually stores and how the workflow state is represented"
+   },
+   {
+    "title": "GDPR → Requests",
+    "path": "wiki/features/apps-gdpr-requests.md",
+    "evidence": "data subject requests"
+   },
+   {
+    "title": "GDPR → Requests: types & channels",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-types-channels.md",
+    "evidence": "4 customer-initiated request types"
+   }
+  ],
+  "GdprRequestCreateInput": [
+   {
+    "title": "GDPR → Requests: types & channels",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-types-channels.md",
+    "evidence": "4 customer-initiated request types"
+   },
+   {
+    "title": "GDPR → Requests: data model",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-data-model.md",
+    "evidence": "what a request actually stores and how the workflow state is represented"
+   }
+  ],
+  "GdprRequestCreatePayload": [
+   {
+    "title": "GDPR → Requests: types & channels",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-types-channels.md",
+    "evidence": "4 customer-initiated request types"
+   },
+   {
+    "title": "GDPR → Requests: data model",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-data-model.md",
+    "evidence": "what a request actually stores and how the workflow state is represented"
+   }
+  ],
+  "GdprRequestType": [
+   {
+    "title": "GDPR → Requests: types & channels",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-types-channels.md",
+    "evidence": "4 customer-initiated request types"
+   }
+  ],
+  "GoogleTaxonomy": [
+   {
+    "title": "Categories — Taxonomy (Google Shopping mapping)",
+    "path": "wiki/features/products-categories/products-categories-taxonomy.md",
+    "evidence": "the Google Product Taxonomy"
+   }
+  ],
+  "HasMetafields": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "HasMetafieldsIdentifier": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "MailingAddress": [
+   {
+    "title": "Customer addresses",
+    "path": "wiki/storefront/customer-addresses.md",
+    "evidence": "personal address book — one collection for shipping, one for billing."
+   }
+  ],
+  "Menu": [
+   {
+    "title": "Storefront Navigation",
+    "path": "wiki/features/design-navigation.md",
+    "evidence": "menus — the Main menu rendered in the store header and the Footer menu"
+   },
+   {
+    "title": "Navigation — menu groups (main + footer)",
+    "path": "wiki/features/design-navigation/design-navigation-menu-groups.md",
+    "evidence": "two menu trees: the Main menu"
+   }
+  ],
+  "MenuItem": [
+   {
+    "title": "Storefront Navigation",
+    "path": "wiki/features/design-navigation.md",
+    "evidence": "menus — the Main menu rendered in the store header and the Footer menu"
+   },
+   {
+    "title": "Navigation — item types",
+    "path": "wiki/features/design-navigation/design-navigation-item-types.md",
+    "evidence": "Choose item type side panel opens with one card per link type"
+   }
+  ],
+  "Metafield": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   },
+   {
+    "title": "Metafield value formats",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-value-formats.md",
+    "evidence": "This page gives the exact string for each type"
+   },
+   {
+    "title": "Metafields and metaobjects: permissions and visibility",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-permissions.md",
+    "evidence": "Three separate questions decide who sees and changes metafield and metaobject data"
+   }
+  ],
+  "MetafieldReference": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "`Product`, `ProductVariant`, `Collection`, `Page`, `Metaobject`, and files as `MediaImage`"
+   }
+  ],
+  "MetafieldReferenceConnection": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "`Product`, `ProductVariant`, `Collection`, `Page`, `Metaobject`, and files as `MediaImage`"
+   }
+  ],
+  "Metaobject": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Only entries of `PUBLIC_READ` definitions are returned"
+   },
+   {
+    "title": "Metaobject definitions and entries",
+    "path": "wiki/concepts/metafields-metaobjects/metaobjects-definitions.md",
+    "evidence": "is a record type the store designs itself"
+   }
+  ],
+  "MetaobjectConnection": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Only entries of `PUBLIC_READ` definitions are returned"
+   },
+   {
+    "title": "Metaobject definitions and entries",
+    "path": "wiki/concepts/metafields-metaobjects/metaobjects-definitions.md",
+    "evidence": "is a record type the store designs itself"
+   }
+  ],
+  "MetaobjectField": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   },
+   {
+    "title": "Metafield value formats",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-value-formats.md",
+    "evidence": "This page gives the exact string for each type"
+   }
+  ],
+  "MetaobjectHandleInput": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Only entries of `PUBLIC_READ` definitions are returned"
+   },
+   {
+    "title": "Metaobject definitions and entries",
+    "path": "wiki/concepts/metafields-metaobjects/metaobjects-definitions.md",
+    "evidence": "is a record type the store designs itself"
+   }
+  ],
+  "OfferHistoryInput": [
+   {
+    "title": "Cross-Sell — view tracking & randomisation",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-view-tracking.md",
+    "evidence": "per-customer view cap"
+   }
+  ],
+  "OfferViewsInput": [
+   {
+    "title": "Cross-Sell — view tracking & randomisation",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-view-tracking.md",
+    "evidence": "per-customer view cap"
+   }
+  ],
+  "Order": [
+   {
+    "title": "Order",
+    "path": "wiki/entities/order.md",
+    "evidence": "An Order is the record of a customer's purchase intent at the store."
+   }
+  ],
+  "OrderConnection": [
+   {
+    "title": "Order",
+    "path": "wiki/entities/order.md",
+    "evidence": "An Order is the record of a customer's purchase intent at the store."
+   }
+  ],
+  "OrderDiscountRecord": [
+   {
+    "title": "Discount",
+    "path": "wiki/entities/discount.md",
+    "evidence": "rule the merchant configures to reduce the price the customer pays"
+   }
+  ],
+  "OrderFulfillmentStatus": [
+   {
+    "title": "Shipping Status",
+    "path": "wiki/entities/shipping-status.md",
+    "evidence": "tracks where the order is in the fulfillment lifecycle"
+   }
+  ],
+  "Page": [
+   {
+    "title": "Landing Pages",
+    "path": "wiki/features/marketing-landing-pages.md",
+    "evidence": "storefront CMS for everything that isn't a product, a category, a blog article"
+   }
+  ],
+  "PageConnection": [
+   {
+    "title": "Landing Pages",
+    "path": "wiki/features/marketing-landing-pages.md",
+    "evidence": "storefront CMS for everything that isn't a product, a category, a blog article"
+   }
+  ],
+  "Policy": [
+   {
+    "title": "GDPR → Policy",
+    "path": "wiki/features/apps-gdpr-policy.md",
+    "evidence": "manages their privacy / legal policy documents"
+   },
+   {
+    "title": "GDPR — Policy: storefront rendering",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-storefront.md",
+    "evidence": "a policy lives as a storefront page"
+   },
+   {
+    "title": "GDPR — Policy: form mapping",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-forms.md",
+    "evidence": "how policies attach to storefront forms"
+   }
+  ],
+  "PolicyAcceptance": [
+   {
+    "title": "GDPR — Consent capture & acceptance logging",
+    "path": "wiki/features/apps-gdpr-overview/apps-gdpr-overview-consent-logging.md",
+    "evidence": "where and how policy consent is captured into the acceptance log"
+   }
+  ],
+  "PolicyForm": [
+   {
+    "title": "GDPR — Policy: form mapping",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-forms.md",
+    "evidence": "many-to-many mapping between policies and the 5 GDPR form types"
+   }
+  ],
+  "PolicyRequirement": [
+   {
+    "title": "GDPR — Policy: form mapping",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-forms.md",
+    "evidence": "many-to-many mapping between policies and the 5 GDPR form types"
+   }
+  ],
+  "Product": [
+   {
+    "title": "Product",
+    "path": "wiki/entities/product.md",
+    "evidence": "is a sellable item in the merchant's catalog"
+   }
+  ],
+  "Product.metafield": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "Product.metafields": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Without it nothing is found, since there is no app-reserved default."
+   }
+  ],
+  "ProductBackInStockInput": [
+   {
+    "title": "Customer notifications (back-in-stock & subscription manager)",
+    "path": "wiki/storefront/storefront-notifications.md",
+    "evidence": "Notify me when available"
+   }
+  ],
+  "ProductBanner": [
+   {
+    "title": "Banners & Labels",
+    "path": "wiki/features/products-banners-labels.md",
+    "evidence": "visual badges that appear on product cards"
+   },
+   {
+    "title": "Banners & Labels — fields & forms",
+    "path": "wiki/features/products-banners-labels/products-banners-labels-fields.md",
+    "evidence": "the field-by-field shape of each form"
+   }
+  ],
+  "ProductBundle": [
+   {
+    "title": "Bundle",
+    "path": "wiki/entities/bundle.md",
+    "evidence": "groups multiple constituent products together and sells them at a single bundled price"
+   },
+   {
+    "title": "Bundles (product bundles)",
+    "path": "wiki/features/bundles-list.md",
+    "evidence": "lets the merchant sell multiple products as a single SKU at a bundled price"
+   }
+  ],
+  "ProductBundleItem": [
+   {
+    "title": "Bundle",
+    "path": "wiki/entities/bundle.md",
+    "evidence": "groups multiple constituent products together and sells them at a single bundled price"
+   }
+  ],
+  "ProductCustomization": [
+   {
+    "title": "Product Option",
+    "path": "wiki/entities/product-option.md",
+    "evidence": "a per-product customisation field that the customer fills in at the cart-add / product-detail stage"
+   },
+   {
+    "title": "Product Options",
+    "path": "wiki/features/products-options-overview.md",
+    "evidence": "Product Options is an installable app that adds per-product customisation options"
+   }
+  ],
+  "ProductDiscount": [
+   {
+    "title": "Discount",
+    "path": "wiki/entities/discount.md",
+    "evidence": "rule the merchant configures to reduce the price the customer pays"
+   },
+   {
+    "title": "Discount storefront display",
+    "path": "wiki/features/marketing-discounts/discounts-storefront-display.md",
+    "evidence": "what the customer sees when a discount is active"
+   }
+  ],
+  "ProductFile": [
+   {
+    "title": "Digital & downloadable products",
+    "path": "wiki/concepts/digital-products.md",
+    "evidence": "A digital product is a non-physical item"
+   }
+  ],
+  "ProductLabel": [
+   {
+    "title": "Banners & Labels",
+    "path": "wiki/features/products-banners-labels.md",
+    "evidence": "visual badges that appear on product cards"
+   },
+   {
+    "title": "Banners & Labels — fields & forms",
+    "path": "wiki/features/products-banners-labels/products-banners-labels-fields.md",
+    "evidence": "the field-by-field shape of each form"
+   }
+  ],
+  "ProductOption": [
+   {
+    "title": "Variants model — Parameter",
+    "path": "wiki/concepts/variants-model/variants-parameter.md",
+    "evidence": "is a store-wide attribute definition that names one customisation dimension of the catalogue"
+   }
+  ],
+  "ProductOptionValue": [
+   {
+    "title": "Variants model — Option",
+    "path": "wiki/concepts/variants-model/variants-option.md",
+    "evidence": "Options are catalogue-level dictionary entries — store-wide, reusable across every product"
+   }
+  ],
+  "ProductOptionValueSwatch": [
+   {
+    "title": "Variants — the 6 option types",
+    "path": "wiki/features/products-variants-options/products-variants-types.md",
+    "evidence": "it decides what the customer sees on the storefront picker"
+   }
+  ],
+  "ProductProperty": [
+   {
+    "title": "Category Property",
+    "path": "wiki/entities/category-property.md",
+    "evidence": "a category-scoped descriptive specification"
+   }
+  ],
+  "ProductReview": [
+   {
+    "title": "Product Reviews (CloudCart Reviews)",
+    "path": "wiki/features/apps-product-review.md",
+    "evidence": "adds customer reviews AND optionally Questions & Answers to the storefront's product detail pages"
+   }
+  ],
+  "ProductReviewAnswerCreatePayload": [
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form"
+   }
+  ],
+  "ProductReviewCreatePayload": [
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form"
+   }
+  ],
+  "ProductReviewSettings": [
+   {
+    "title": "Product Reviews — Settings",
+    "path": "wiki/features/apps-product-review/apps-product-review-settings.md",
+    "evidence": "the store-wide review-policy control panel"
+   }
+  ],
+  "ProductReviewSubmitPayload": [
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form"
+   }
+  ],
+  "ProductSizeChart": [
+   {
+    "title": "Size Chart",
+    "path": "wiki/features/apps-size-chart.md",
+    "evidence": "opens a modal with the sizing reference table"
+   }
+  ],
+  "ProductStatusType": [
+   {
+    "title": "Product Status",
+    "path": "wiki/entities/product-status.md",
+    "evidence": "the stock-based availability label that customers see on the storefront product card"
+   },
+   {
+    "title": "Inventory — in-stock badge + low-stock alerts",
+    "path": "wiki/concepts/inventory-tracking/inventory-in-stock-badge.md",
+    "evidence": "The in-stock badge — what the storefront shows for each Variant"
+   }
+  ],
+  "ProductTag": [
+   {
+    "title": "Storefront — Tag landing (`/tags/{slug}`)",
+    "path": "wiki/storefront/tag.md",
+    "evidence": "The tag page lists every product tagged with a given product tag"
+   },
+   {
+    "title": "Product Tags",
+    "path": "wiki/features/products-tags.md",
+    "evidence": "Tags are free-form labels the merchant attaches to products"
+   },
+   {
+    "title": "Product Tags — data model & storefront",
+    "path": "wiki/features/products-tags/products-tags-data-model.md",
+    "evidence": "the storefront surfaces a tag drives"
+   }
+  ],
+  "ProductVariant": [
+   {
+    "title": "Variant",
+    "path": "wiki/entities/variant.md",
+    "evidence": "the concrete combination of parameter options the customer actually adds to a cart"
+   },
+   {
+    "title": "Variants model",
+    "path": "wiki/concepts/variants-model.md",
+    "evidence": "Options have NO SKU, NO stock, NO price"
+   }
+  ],
+  "Return": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "ReturnRequestFlow": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "ReturnStatus": [
+   {
+    "title": "Order returns — lifecycle & states",
+    "path": "wiki/features/orders-returns/orders-returns-lifecycle.md",
+    "evidence": "How a return is created, the states it moves through"
+   }
+  ],
+  "SEO": [
+   {
+    "title": "SEO Meta — Fields",
+    "path": "wiki/entities/seo-meta/seo-meta-fields.md",
+    "evidence": "five user-facing fields"
+   }
+  ],
+  "StoreAddress": [
+   {
+    "title": "Local Pickup — physical store locations",
+    "path": "wiki/features/apps-stores/apps-stores-main-locations.md",
+    "evidence": "physical store locations that power Local Pickup"
+   },
+   {
+    "title": "Local Pickup (Stores)",
+    "path": "wiki/features/apps-stores.md",
+    "evidence": "adds physical store locations"
+   }
+  ],
+  "StoreLocation": [
+   {
+    "title": "Local Pickup — physical store locations",
+    "path": "wiki/features/apps-stores/apps-stores-main-locations.md",
+    "evidence": "physical store locations that power Local Pickup"
+   },
+   {
+    "title": "Local Pickup (Stores)",
+    "path": "wiki/features/apps-stores.md",
+    "evidence": "adds physical store locations"
+   }
+  ],
+  "StoreWorkingHours": [
+   {
+    "title": "Local Pickup — physical store locations",
+    "path": "wiki/features/apps-stores/apps-stores-main-locations.md",
+    "evidence": "physical store locations that power Local Pickup"
+   },
+   {
+    "title": "Local Pickup (Stores)",
+    "path": "wiki/features/apps-stores.md",
+    "evidence": "adds physical store locations"
+   }
+  ],
+  "SubscribeForm": [
+   {
+    "title": "Subscribe Form",
+    "path": "wiki/entities/subscriber-form.md",
+    "evidence": "visual storefront module the merchant builds and embeds"
+   },
+   {
+    "title": "Subscribe Forms",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms.md",
+    "evidence": "collecting subscribers on the storefront"
+   },
+   {
+    "title": "Subscribe Form — Model & render modes",
+    "path": "wiki/entities/subscriber-form/subscriber-form-model.md",
+    "evidence": "render mode (popup vs embedded)"
+   }
+  ],
+  "SubscribeFormButton": [
+   {
+    "title": "Subscribe forms — submit button & confirmation",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-button-actions.md",
+    "evidence": "What the form's submit button does when the visitor clicks it"
+   }
+  ],
+  "SubscribeFormCustomField": [
+   {
+    "title": "Subscriber Custom Fields",
+    "path": "wiki/features/marketing-subscribers-custom-fields.md",
+    "evidence": "per-subscriber attributes that go beyond the built-in name / email / phone"
+   }
+  ],
+  "SubscribeFormDisplay": [
+   {
+    "title": "Subscribe forms — display triggers",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-triggers.md",
+    "evidence": "drives when a popup-mode form appears to the visitor"
+   }
+  ],
+  "SubscribeFormField": [
+   {
+    "title": "Subscribe forms — input fields",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-fields.md",
+    "evidence": "four built-in input slots (email, phone, first_name, last_name)"
+   }
+  ],
+  "SubscribeFormPolicy": [
+   {
+    "title": "Subscribe forms — GDPR + cookie consent",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-gdpr-consent.md",
+    "evidence": "Subscribe forms intersect GDPR in three distinct ways"
+   }
+  ],
+  "SubscribeFormSubmitInput": [
+   {
+    "title": "Subscribe forms — submission flow",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-submission-flow.md",
+    "evidence": "When a visitor submits a subscribe form, the platform validates"
+   },
+   {
+    "title": "Subscribe forms — input fields",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-fields.md",
+    "evidence": "four built-in input slots (email, phone, first_name, last_name)"
+   },
+   {
+    "title": "Subscribe Form — Submission & validation",
+    "path": "wiki/entities/subscriber-form/subscriber-form-submission.md",
+    "evidence": "Submission & validation"
+   }
+  ],
+  "SubscribeFormSubmitPayload": [
+   {
+    "title": "Subscribe forms — submission flow",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-submission-flow.md",
+    "evidence": "When a visitor submits a subscribe form"
+   },
+   {
+    "title": "Subscribe Form — Submission & validation",
+    "path": "wiki/entities/subscriber-form/subscriber-form-submission.md",
+    "evidence": "Submission & validation"
+   }
+  ],
+  "SubscribeFormTrigger": [
+   {
+    "title": "Subscribe forms — display triggers",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-triggers.md",
+    "evidence": "drives when a popup-mode form appears to the visitor"
+   }
+  ],
+  "SubscribeFormTriggerType": [
+   {
+    "title": "Subscribe forms — display triggers",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-triggers.md",
+    "evidence": "when a popup-mode form appears to the visitor"
+   }
+  ],
+  "SubscriptionStatus": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "a list of their subscriptions and a detail page for each"
+   },
+   {
+    "title": "Subscriptions (recurring orders)",
+    "path": "wiki/features/apps-subscriptions.md",
+    "evidence": "repeating schedule"
+   }
+  ],
+  "TranslationBundle": [
+   {
+    "title": "Translations",
+    "path": "wiki/features/settings-translations.md",
+    "evidence": "overrides the platform's built-in UI strings"
+   }
+  ],
+  "UrlRedirect": [
+   {
+    "title": "301 Redirects (per-URL redirects manager)",
+    "path": "wiki/features/marketing-seo-301-redirects.md",
+    "evidence": "permanent (HTTP 301) redirects from old URLs to new URLs"
+   },
+   {
+    "title": "SEO 301 Redirect",
+    "path": "wiki/entities/seo-redirect.md",
+    "evidence": "A 301 Redirect is a permanent URL rule (old URL → new URL)"
+   }
+  ],
+  "UrlRedirectConnection": [
+   {
+    "title": "SEO 301 Redirect",
+    "path": "wiki/entities/seo-redirect.md",
+    "evidence": "A 301 Redirect is a permanent URL rule (old URL → new URL)"
+   }
+  ],
+  "Vendor": [
+   {
+    "title": "Vendor (Brand)",
+    "path": "wiki/entities/vendor.md",
+    "evidence": "customer-facing supplier or brand label associated with products in the catalog"
+   },
+   {
+    "title": "Storefront — Vendor landing (`/vendor/{slug}`)",
+    "path": "wiki/storefront/storefront-vendor.md",
+    "evidence": "The vendor page lists every product attributed to a given vendor (brand)"
+   }
+  ],
+  "VisitorSession": [
+   {
+    "title": "Analytics — event capture (storefront tracker + UUID identity)",
+    "path": "wiki/features/analytics-pipeline/analytics-event-capture.md",
+    "evidence": "anonymous visitor identifier"
+   }
+  ],
+  "article": [
+   {
+    "title": "Blog Article",
+    "path": "wiki/entities/blog-article.md",
+    "evidence": "chronological piece of content"
+   },
+   {
+    "title": "Blog Articles",
+    "path": "wiki/features/marketing-blog-articles.md",
+    "evidence": "where the merchant writes and publishes the long-form content that lives at /blog/"
+   },
+   {
+    "title": "Blog Articles — storefront visibility & publishing",
+    "path": "wiki/features/marketing-blog-articles/blog-articles-storefront-visibility.md",
+    "evidence": "whether it appears on the storefront, on which URLs, with which comment behaviour"
+   }
+  ],
+  "articleCommentCreate": [
+   {
+    "title": "Blog Comments — Storefront submission",
+    "path": "wiki/features/marketing-blog-comment/marketing-blog-comment-submission.md",
+    "evidence": "what happens when a visitor submits the comment form on an article page"
+   },
+   {
+    "title": "Blog Comment",
+    "path": "wiki/entities/blog-comment.md",
+    "evidence": "piece of visitor-submitted feedback attached to a single Blog Article"
+   },
+   {
+    "title": "Blog Comment — Moderation policy",
+    "path": "wiki/entities/blog-comment/blog-comment-moderation-policy.md",
+    "evidence": "The moderation policy for Blog Comments is per-Blog Category, not per-article and not per-comment"
+   }
+  ],
+  "articleTag": [
+   {
+    "title": "Blog Tags — Storefront & SEO",
+    "path": "wiki/features/marketing-blog-tags/blog-tags-storefront-seo.md",
+    "evidence": "Every tag becomes its own indexable page at /blog/tag/<slug>"
+   },
+   {
+    "title": "Blog Tag",
+    "path": "wiki/entities/blog-tag.md",
+    "evidence": "free-form, flat label that the merchant attaches to a Blog Article"
+   }
+  ],
+  "articles": [
+   {
+    "title": "Blog Article",
+    "path": "wiki/entities/blog-article.md",
+    "evidence": "chronological piece of content"
+   },
+   {
+    "title": "Blog Articles",
+    "path": "wiki/features/marketing-blog-articles.md",
+    "evidence": "where the merchant writes and publishes the long-form content that lives at /blog/"
+   },
+   {
+    "title": "Blog Articles — storefront visibility & publishing",
+    "path": "wiki/features/marketing-blog-articles/blog-articles-storefront-visibility.md",
+    "evidence": "whether it appears on the storefront, on which URLs, with which comment behaviour"
+   }
+  ],
+  "blog": [
+   {
+    "title": "Blog Categories",
+    "path": "wiki/features/marketing-blog-category.md",
+    "evidence": "top-level container for blog articles"
+   },
+   {
+    "title": "Blog Category",
+    "path": "wiki/entities/blog-category.md",
+    "evidence": "top-level container for Blog Articles"
+   }
+  ],
+  "blogs": [
+   {
+    "title": "Blog Categories",
+    "path": "wiki/features/marketing-blog-category.md",
+    "evidence": "top-level container for blog articles"
+   },
+   {
+    "title": "Blog Category",
+    "path": "wiki/entities/blog-category.md",
+    "evidence": "top-level container for Blog Articles"
+   }
+  ],
+  "cart": [
+   {
+    "title": "Cart",
+    "path": "wiki/entities/cart.md",
+    "evidence": "pre-purchase, in-progress record of what a customer is preparing to buy"
+   }
+  ],
+  "cartCreditPlans": [
+   {
+    "title": "Checkout — Payment step",
+    "path": "wiki/storefront/checkout/checkout-step-payment.md",
+    "evidence": "The customer picks the payment provider for the order"
+   }
+  ],
+  "cartCrossSellApply": [
+   {
+    "title": "Cross-Sell — display modes & discounts",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-display-discounts.md",
+    "evidence": "how the offered products are surfaced"
+   },
+   {
+    "title": "Cross-Sell & UpSell",
+    "path": "wiki/features/marketing-cross-sell.md",
+    "evidence": "conditional product recommendations"
+   }
+  ],
+  "cartDeliveryQuote": [
+   {
+    "title": "Checkout — Shipping method step (provider × service)",
+    "path": "wiki/storefront/checkout/checkout-step-shipping-method.md",
+    "evidence": "they pick the actual shipping method"
+   },
+   {
+    "title": "Shipping calculation",
+    "path": "wiki/concepts/shipping-calculation.md",
+    "evidence": "which shipping methods are *available*, what each one *costs*"
+   }
+  ],
+  "cartDeliverySlots": [
+   {
+    "title": "Checkout — Time slots / delivery date picker",
+    "path": "wiki/storefront/checkout/checkout-step-time-slots.md",
+    "evidence": "book your delivery"
+   }
+  ],
+  "cartDiscountCodesUpdate": [
+   {
+    "title": "Discount Code",
+    "path": "wiki/entities/discount-code.md",
+    "evidence": "redeemable string the customer enters at checkout"
+   }
+  ],
+  "cartOfferDismissed": [
+   {
+    "title": "Cross-Sell — view tracking & randomisation",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-view-tracking.md",
+    "evidence": "per-customer view cap"
+   }
+  ],
+  "cartOfferViewed": [
+   {
+    "title": "Cross-Sell — view tracking & randomisation",
+    "path": "wiki/features/marketing-cross-sell/cross-sell-view-tracking.md",
+    "evidence": "per-customer view cap"
+   }
+  ],
+  "cartPaymentMethodUpdate": [
+   {
+    "title": "Checkout — Payment step",
+    "path": "wiki/storefront/checkout/checkout-step-payment.md",
+    "evidence": "The customer picks the payment provider for the order"
+   }
+  ],
+  "cartPickupPoints": [
+   {
+    "title": "Checkout — Shipping to office / locker (with + without Google Maps)",
+    "path": "wiki/storefront/checkout/checkout-step-shipping-pickup.md",
+    "evidence": "carrier-owned pickup point"
+   }
+  ],
+  "checkoutSettings": [
+   {
+    "title": "Cart and checkout",
+    "path": "wiki/features/settings-cart.md",
+    "evidence": "everything that happens between"
+   }
+  ],
+  "contactFormSubmit": [
+   {
+    "title": "Contacts page (storefront)",
+    "path": "wiki/storefront/contacts.md",
+    "evidence": "contact form whose submissions are e-mailed to the merchant's `site_email`"
+   }
+  ],
+  "cookieConsent": [
+   {
+    "title": "GDPR → Cookies",
+    "path": "wiki/features/apps-gdpr-cookies.md",
+    "evidence": "cookie-consent experience"
+   },
+   {
+    "title": "GDPR — Cookies: bar & wall presentation",
+    "path": "wiki/features/apps-gdpr-cookies/apps-gdpr-cookies-bar-wall.md",
+    "evidence": "a dismissible bar at page-bottom vs a blocking wall modal"
+   }
+  ],
+  "customer": [
+   {
+    "title": "Customer",
+    "path": "wiki/entities/customer.md",
+    "evidence": "buyer of the merchant's store"
+   }
+  ],
+  "customerAddressCreate": [
+   {
+    "title": "Customer addresses",
+    "path": "wiki/storefront/customer-addresses.md",
+    "evidence": "personal address book — one collection for shipping, one for billing."
+   }
+  ],
+  "customerAddressUpdate": [
+   {
+    "title": "Customer addresses",
+    "path": "wiki/storefront/customer-addresses.md",
+    "evidence": "personal address book — one collection for shipping, one for billing."
+   }
+  ],
+  "customerDefaultAddressUpdate": [
+   {
+    "title": "Customer addresses",
+    "path": "wiki/storefront/customer-addresses.md",
+    "evidence": "personal address book — one collection for shipping, one for billing."
+   }
+  ],
+  "customerDefaultBillingAddressUpdate": [
+   {
+    "title": "Customer addresses",
+    "path": "wiki/storefront/customer-addresses.md",
+    "evidence": "personal address book — one collection for shipping, one for billing."
+   }
+  ],
+  "customerPolicyConsentAccept": [
+   {
+    "title": "GDPR — Consent capture & acceptance logging",
+    "path": "wiki/features/apps-gdpr-overview/apps-gdpr-overview-consent-logging.md",
+    "evidence": "where and how policy consent is captured into the acceptance log"
+   }
+  ],
+  "customerSubscriptionCancel": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "Cancel the subscription"
+   }
+  ],
+  "customerSubscriptionPause": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "Pause the subscription"
+   }
+  ],
+  "customerSubscriptionResume": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "Pause the subscription"
+   }
+  ],
+  "customerSubscriptionSkip": [
+   {
+    "title": "Subscriptions — what the customer can do",
+    "path": "wiki/features/apps-subscriptions/apps-subscriptions-customer-controls.md",
+    "evidence": "Skip a delivery"
+   }
+  ],
+  "fastOrderSettings": [
+   {
+    "title": "Fast Order (one-click order button)",
+    "path": "wiki/features/apps-fast-order.md",
+    "evidence": "single-form, single-click order"
+   },
+   {
+    "title": "Fast Order → Settings",
+    "path": "wiki/features/apps-fast-order-settings.md",
+    "evidence": "configures the button title + display behaviour"
+   }
+  ],
+  "fastOrderSubmit": [
+   {
+    "title": "Fast Order (one-click order button)",
+    "path": "wiki/features/apps-fast-order.md",
+    "evidence": "single-form, single-click order"
+   }
+  ],
+  "gdprRequestCreate": [
+   {
+    "title": "GDPR → Requests: types & channels",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-types-channels.md",
+    "evidence": "4 customer-initiated request types"
+   },
+   {
+    "title": "GDPR → Requests: data model",
+    "path": "wiki/features/apps-gdpr-requests/apps-gdpr-requests-data-model.md",
+    "evidence": "what a request actually stores and how the workflow state is represented"
+   },
+   {
+    "title": "GDPR → Requests",
+    "path": "wiki/features/apps-gdpr-requests.md",
+    "evidence": "data subject requests"
+   }
+  ],
+  "menu": [
+   {
+    "title": "Storefront Navigation",
+    "path": "wiki/features/design-navigation.md",
+    "evidence": "menus — the Main menu rendered in the store header and the Footer menu"
+   },
+   {
+    "title": "Navigation — menu groups (main + footer)",
+    "path": "wiki/features/design-navigation/design-navigation-menu-groups.md",
+    "evidence": "two menu trees: the Main menu"
+   }
+  ],
+  "metaobject": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Only entries of `PUBLIC_READ` definitions are returned"
+   },
+   {
+    "title": "Metaobject definitions and entries",
+    "path": "wiki/concepts/metafields-metaobjects/metaobjects-definitions.md",
+    "evidence": "is a record type the store designs itself"
+   }
+  ],
+  "metaobjects": [
+   {
+    "title": "Metafields and metaobjects on a Nitrogen storefront",
+    "path": "wiki/concepts/metafields-metaobjects/metafields-nitrogen.md",
+    "evidence": "Only entries of `PUBLIC_READ` definitions are returned"
+   },
+   {
+    "title": "Metaobject definitions and entries",
+    "path": "wiki/concepts/metafields-metaobjects/metaobjects-definitions.md",
+    "evidence": "is a record type the store designs itself"
+   }
+  ],
+  "order": [
+   {
+    "title": "Order",
+    "path": "wiki/entities/order.md",
+    "evidence": "An Order is the record of a customer's purchase intent at the store."
+   }
+  ],
+  "page": [
+   {
+    "title": "Landing Pages",
+    "path": "wiki/features/marketing-landing-pages.md",
+    "evidence": "storefront CMS for everything that isn't a product, a category, a blog article"
+   }
+  ],
+  "pages": [
+   {
+    "title": "Landing Pages",
+    "path": "wiki/features/marketing-landing-pages.md",
+    "evidence": "storefront CMS for everything that isn't a product, a category, a blog article"
+   }
+  ],
+  "policies": [
+   {
+    "title": "GDPR → Policy",
+    "path": "wiki/features/apps-gdpr-policy.md",
+    "evidence": "manages their privacy / legal policy documents"
+   },
+   {
+    "title": "GDPR — Policy: form mapping",
+    "path": "wiki/features/apps-gdpr-policy/apps-gdpr-policy-forms.md",
+    "evidence": "how policies attach to storefront forms"
+   }
+  ],
+  "productBackInStockSubscribe": [
+   {
+    "title": "Missing products",
+    "path": "wiki/features/products-missing-product.md",
+    "evidence": "Notify me when in stock"
+   },
+   {
+    "title": "Customer notifications (back-in-stock & subscription manager)",
+    "path": "wiki/storefront/storefront-notifications.md",
+    "evidence": "Notify me when available"
+   }
+  ],
+  "productReviewAnswerCreate": [
+   {
+    "title": "Reviews — Replies (threaded answers)",
+    "path": "wiki/features/marketing-reviews/marketing-reviews-replies.md",
+    "evidence": "threaded answers that show under the parent review on the storefront product page"
+   },
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form"
+   }
+  ],
+  "productReviewCreate": [
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form, and"
+   },
+   {
+    "title": "Reviews — Submission rules (storefront-side validation)",
+    "path": "wiki/features/marketing-reviews/marketing-reviews-submission-rules.md",
+    "evidence": "every server-side rule that runs before a storefront-submitted review reaches the moderation queue"
+   },
+   {
+    "title": "Product Reviews — Moderation",
+    "path": "wiki/features/apps-product-review/apps-product-review-moderation.md",
+    "evidence": "the three moderation modes"
+   }
+  ],
+  "productReviewSettings": [
+   {
+    "title": "Product Reviews — Settings",
+    "path": "wiki/features/apps-product-review/apps-product-review-settings.md",
+    "evidence": "the store-wide review-policy control panel"
+   }
+  ],
+  "productReviewSubmit": [
+   {
+    "title": "Product Reviews — Submission",
+    "path": "wiki/features/apps-product-review/apps-product-review-submission.md",
+    "evidence": "what fields the storefront review form, reply form, and"
+   },
+   {
+    "title": "Reviews — Submission rules (storefront-side validation)",
+    "path": "wiki/features/marketing-reviews/marketing-reviews-submission-rules.md",
+    "evidence": "every server-side rule that runs before a storefront-submitted review reaches the moderation queue"
+   },
+   {
+    "title": "Product Reviews — Moderation",
+    "path": "wiki/features/apps-product-review/apps-product-review-moderation.md",
+    "evidence": "the three moderation modes"
+   }
+  ],
+  "productTag": [
+   {
+    "title": "Storefront — Tag landing (`/tags/{slug}`)",
+    "path": "wiki/storefront/tag.md",
+    "evidence": "The tag page lists every product tagged with a given product tag"
+   },
+   {
+    "title": "Product Tags",
+    "path": "wiki/features/products-tags.md",
+    "evidence": "Tags are free-form labels the merchant attaches to products"
+   },
+   {
+    "title": "Product Tags — data model & storefront",
+    "path": "wiki/features/products-tags/products-tags-data-model.md",
+    "evidence": "the storefront surfaces a tag drives"
+   }
+  ],
+  "returnRequestCreate": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "returnRequestResendCode": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "returnRequestStart": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "returnRequestVerify": [
+   {
+    "title": "Withdrawal page (withdraw from contract)",
+    "path": "wiki/storefront/storefront-withdrawal.md",
+    "evidence": "online \"withdraw from contract\" statement required by EU Directive 2023/2673, Art. 11a"
+   }
+  ],
+  "search": [
+   {
+    "title": "Storefront — New search (predictive, `/search`)",
+    "path": "wiki/storefront/storefront-search-new.md",
+    "evidence": "predictive search-as-you-type dropdown shows matching products and suggested terms"
+   }
+  ],
+  "searchEventTrack": [
+   {
+    "title": "Aura Search — the Searches tab (search analytics)",
+    "path": "wiki/features/apps-advanced-search/apps-advanced-search-analytics.md",
+    "evidence": "the storefront reports each result opened, which is what fills CTR"
+   }
+  ],
+  "storeLocation": [
+   {
+    "title": "Local Pickup — physical store locations",
+    "path": "wiki/features/apps-stores/apps-stores-main-locations.md",
+    "evidence": "physical store locations that power Local Pickup"
+   },
+   {
+    "title": "Local Pickup (Stores)",
+    "path": "wiki/features/apps-stores.md",
+    "evidence": "adds physical store locations"
+   }
+  ],
+  "storeLocations": [
+   {
+    "title": "Local Pickup — physical store locations",
+    "path": "wiki/features/apps-stores/apps-stores-main-locations.md",
+    "evidence": "physical store locations that power Local Pickup"
+   },
+   {
+    "title": "Local Pickup (Stores)",
+    "path": "wiki/features/apps-stores.md",
+    "evidence": "adds physical store locations"
+   }
+  ],
+  "subscribeForm": [
+   {
+    "title": "Subscribe Form",
+    "path": "wiki/entities/subscriber-form.md",
+    "evidence": "visual storefront module the merchant builds and embeds"
+   },
+   {
+    "title": "Subscribe Forms",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms.md",
+    "evidence": "collecting subscribers on the storefront"
+   },
+   {
+    "title": "Subscribe Form — Model & render modes",
+    "path": "wiki/entities/subscriber-form/subscriber-form-model.md",
+    "evidence": "render mode (popup vs embedded)"
+   }
+  ],
+  "subscribeFormSubmit": [
+   {
+    "title": "Subscribe forms — submission flow",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-submission-flow.md",
+    "evidence": "When a visitor submits a subscribe form, the platform validates"
+   },
+   {
+    "title": "Subscribe forms — GDPR + cookie consent",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms/subscribe-forms-gdpr-consent.md",
+    "evidence": "Subscribe forms intersect GDPR in three distinct ways"
+   },
+   {
+    "title": "Subscribe Form — Submission & validation",
+    "path": "wiki/entities/subscriber-form/subscriber-form-submission.md",
+    "evidence": "Submission & validation"
+   }
+  ],
+  "subscribeForms": [
+   {
+    "title": "Subscribe Forms",
+    "path": "wiki/features/marketing-subscribers-subscribe-forms.md",
+    "evidence": "collecting subscribers on the storefront"
+   },
+   {
+    "title": "Subscribe Form",
+    "path": "wiki/entities/subscriber-form.md",
+    "evidence": "visual storefront module the merchant builds and embeds"
+   },
+   {
+    "title": "Subscribe Form — Model & render modes",
+    "path": "wiki/entities/subscriber-form/subscriber-form-model.md",
+    "evidence": "render mode (popup vs embedded)"
+   }
+  ],
+  "translations": [
+   {
+    "title": "Translations",
+    "path": "wiki/features/settings-translations.md",
+    "evidence": "overrides the platform's built-in UI strings"
+   }
+  ],
+  "urlRedirects": [
+   {
+    "title": "301 Redirects (per-URL redirects manager)",
+    "path": "wiki/features/marketing-seo-301-redirects.md",
+    "evidence": "permanent (HTTP 301) redirects from old URLs to new URLs"
+   },
+   {
+    "title": "SEO 301 Redirect",
+    "path": "wiki/entities/seo-redirect.md",
+    "evidence": "A 301 Redirect is a permanent URL rule (old URL → new URL)"
+   },
+   {
+    "title": "301 Redirect — Lookup and cache",
+    "path": "wiki/entities/seo-redirect/seo-redirect-lookup-and-cache.md",
+    "evidence": "the redirect middleware decides — fast — whether any 301 rule matches"
+   }
+  ],
+  "vendor": [
+   {
+    "title": "Storefront — Vendor landing (`/vendor/{slug}`)",
+    "path": "wiki/storefront/storefront-vendor.md",
+    "evidence": "The vendor page lists every product attributed to a given vendor (brand)"
+   },
+   {
+    "title": "Vendor (Brand)",
+    "path": "wiki/entities/vendor.md",
+    "evidence": "customer-facing supplier or brand label associated with products in the catalog"
+   }
+  ],
+  "vendorsConnection": [
+   {
+    "title": "Storefront — Vendors index (`/vendors`)",
+    "path": "wiki/storefront/vendors-list.md",
+    "evidence": "The page only lists vendors that have at least one active product"
+   }
+  ],
+  "visitorSessionCreate": [
+   {
+    "title": "Analytics — event capture (storefront tracker + UUID identity)",
+    "path": "wiki/features/analytics-pipeline/analytics-event-capture.md",
+    "evidence": "anonymous visitor identifier"
+   }
+  ]
+ }
+}

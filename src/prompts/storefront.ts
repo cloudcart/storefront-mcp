@@ -92,6 +92,12 @@ error means the request itself was malformed.
 erroring, which is the harder failure to notice. \`introspect_graphql_schema\`
 flags them.
 
+**The platform wiki.** Where a wiki page documents a type, an operation or a
+field, \`introspect_graphql_schema\` puts a \`Wiki: [Title](url)\` line under it.
+The schema says what you can ask; the page says how the platform behaves — its
+rules, defaults and limits. Open it when a description does not settle how
+something works.
+
 ---
 
 # Catalog

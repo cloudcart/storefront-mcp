@@ -1,5 +1,6 @@
 import { loadSchema } from "../schema/loader.js";
 import { matchAppResourceGroup, APP_KEY_NOTICE_GROUP, type AppResourceGroup } from "../app-resources.js";
+import { wikiLine } from "../wiki-links.js";
 
 type FilterKind = "all" | "types" | "queries" | "mutations";
 type Mode = "full" | "compact";
@@ -49,6 +50,12 @@ function formatFieldCompact(field: { name: string; description?: string | null; 
   const ret = resolveTypeRef(field.type);
   const line = `${field.name} → ${ret}`;
   return field.description ? `${line}  # ${field.description}` : line;
+}
+
+/** The wiki pages that document a root query or mutation, on the line below it; "" when none does. */
+function wikiSuffix(name: string): string {
+  const wiki = wikiLine(name);
+  return wiki ? `\n  ${wiki}` : "";
 }
 
 const MAX_FIELDS_PER_TYPE = 20;
@@ -105,6 +112,8 @@ function formatType(type: {
     const shown = type.fields.slice(0, MAX_FIELDS_PER_TYPE);
     for (const f of shown) {
       lines.push(`  ${formatField(f)}`);
+      const wiki = wikiLine(`${type.name}.${f.name}`);
+      if (wiki) lines.push(`    ${wiki}`);
     }
     if (type.fields.length > MAX_FIELDS_PER_TYPE) {
       // Expose the remaining field names + types (no descriptions) — critical
@@ -121,6 +130,8 @@ function formatType(type: {
     for (const f of shown) {
       const sig = `${f.name}: ${resolveTypeRef(f.type)}`;
       lines.push(`  ${f.description ? `${sig}  # ${f.description}` : sig}`);
+      const wiki = wikiLine(`${type.name}.${f.name}`);
+      if (wiki) lines.push(`    ${wiki}`);
     }
     if (type.inputFields.length > MAX_FIELDS_PER_TYPE) {
       const rest = type.inputFields.slice(MAX_FIELDS_PER_TYPE);
@@ -228,7 +239,8 @@ export function introspectSchema(input: IntrospectInput) {
         const body = (expand && mode === "full") || essentialExpand
           ? formatType(t)
           : formatTypeSummary(t);
-        lines.push(renderAppPrefix(t.name) + body);
+        const wiki = wikiLine(t.name);
+        lines.push(renderAppPrefix(t.name) + body + (wiki ? `\n${wiki}` : ""));
         if (expand) emittedHints.push(...hintsForType(t));
       });
       // Per-type hints (nodes/totalCount, grouped sub-types) — dedup.
@@ -249,7 +261,7 @@ export function introspectSchema(input: IntrospectInput) {
       const fmt = mode === "compact" ? formatFieldCompact : formatField;
       sections.push(
         `## Queries\n` +
-        matched.map((f) => renderAppPrefix(f.name, f) + fmt(f)).join("\n")
+        matched.map((f) => renderAppPrefix(f.name, f) + fmt(f) + wikiSuffix(f.name)).join("\n")
       );
     }
   }
@@ -262,7 +274,7 @@ export function introspectSchema(input: IntrospectInput) {
       const fmt = mode === "compact" ? formatFieldCompact : formatField;
       sections.push(
         `## Mutations\n` +
-        matched.map((f) => renderAppPrefix(f.name, f) + fmt(f)).join("\n")
+        matched.map((f) => renderAppPrefix(f.name, f) + fmt(f) + wikiSuffix(f.name)).join("\n")
       );
     }
   }
