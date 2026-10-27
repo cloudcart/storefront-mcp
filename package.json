@@ -1,6 +1,6 @@
 {
   "name": "@cloudcart/storefront-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "MCP server for the CloudCart Storefront GraphQL API — helps AI assistants build storefronts and checkouts that work",
   "license": "MIT",
   "repository": {
